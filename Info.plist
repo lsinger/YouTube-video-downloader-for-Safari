@@ -25,6 +25,10 @@
 				<string>Add download button.js</string>
 			</array>
 		</dict>
+		<key>Whitelist</key>
+		<array>
+			<string>http://*.youtube.com/watch</string>
+		</array>
 	</dict>
 	<key>Description</key>
 	<string>Adds download links to YouTube video pages.</string>
