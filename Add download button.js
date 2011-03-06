@@ -38,7 +38,7 @@ formatDescriptions['37'] = [1, "Full HD MP4 (1080p)"];
 var encodedTitle = escape(document.getElementById("eow-title").title);
 if (!htmlFive) {
 	// get the URL map for the formats
-	formatURLMap = htmlSource.split("fmt_url_map=")[1].split("&")[0];
+	formatURLMap = htmlSource.split('PLAYER_CONFIG')[1].split("fmt_url_map\": \"")[1].split("\",")[0]
 	// fix bug with last format by adding a comma to the end
 	formatURLMap += ",";
 	// replace HTML encodings
