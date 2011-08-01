@@ -46,6 +46,7 @@ if (!htmlFive) {
 	formatURLMap = unescape(formatURLMap);
 	formatURLMap = formatURLMap.replace(/%2C/g, ",");
 	formatURLMap = formatURLMap.replace(/%3A/g, ":");
+	formatURLMap = formatURLMap.replace(/\\\//g, "/").replace(/\\u0026/g, "&");
 	// split it into pieces
 	formatURLMapArray = formatURLMap.split("|");
 	// add format numbers to formats array
