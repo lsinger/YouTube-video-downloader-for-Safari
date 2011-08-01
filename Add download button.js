@@ -16,7 +16,7 @@ function formatSorterFlash (a, b) {
 	return formatDescriptions[a[0]][0] - formatDescriptions[b[0]][0];
 }
 function formatSorterHTMLFive (a, b) {
-	return formatDescriptions[a[3]][0] - formatDescriptions[b[3]][0];
+	return formatDescriptions[a[0]][0] - formatDescriptions[b[0]][0];
 }
 // get the HTML source of the video page for later use
 var htmlSource = document.getElementsByTagName("html")[0].innerHTML;
