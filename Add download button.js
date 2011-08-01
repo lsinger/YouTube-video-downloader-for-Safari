@@ -102,9 +102,7 @@ if (!htmlFive) {
 	var scripts = document.getElementsByTagName("script");
 	var scriptSource = scripts[scripts.length - 4].innerHTML;
 	// find where format function is, split into parts
-	var formats = scriptSource.split('videoPlayer.setAvailableFormat("');
-	// remove first piece, doesn't relate to formats
-	formats.splice(0, 1);
+	var formats = scriptSource.split("\"fmt_url_map\": \"")[1].split("\"")[0].split(",");
 	if (formats.length > 1) {
 		var downloadString = "Downloads: ";
 	} else {
@@ -112,22 +110,23 @@ if (!htmlFive) {
 	}
 	// clean up formats
 	for (var i = 0; i < formats.length; i++) {
-		formats[i] = formats[i].split('");')[0];
-		formats[i] = formats[i].split('", "');
+		// formats[i][0] wil be formatDescription, formats[i][1] will be video URL
+		formats[i] = formats[i].split('|');
+		formats[i][1] = formats[i][1].replace(/\\\//g, "/").replace(/\\u0026/g, "&");
 	}
 	// sort them
 	formats.sort(formatSorterHTMLFive);
 	// add them to the download string
 	for (var i = 0; i < formats.length; i++) {
-		var videoURL = formats[i][0] + "&title=" + encodedTitle;
-		if (formats[i][3] in formatDescriptions) {
-			var formatDescription = formatDescriptions[formats[i][3]][1];
+		var videoURL = formats[i][1] + "&title=" + encodedTitle;
+		if (formats[i][0] in formatDescriptions) {
+			var formatDescription = formatDescriptions[formats[i][0]][1];
 		} else {
 			var formatDescription = "Unknown format";
 		}
 		// add specific format specification, if available/needed
-		if (formatDescriptions[formats[i][3]][2]) {
-			var hoverTitle = "Download as " + formatDescription + " (" + formatDescriptions[formats[i][3]][2] + ") by Option-clicking";
+		if (formatDescriptions[formats[i][0]][2]) {
+			var hoverTitle = "Download as " + formatDescription + " (" + formatDescriptions[formats[i][0]][2] + ") by Option-clicking";
 		} else {
 			var hoverTitle = "Download as " + formatDescription + " by Option-clicking";
 		}
