@@ -3,7 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>Jonathan Lynch</string>
+	<string>Jonathan Lynch, et al.</string>
+	<key>Builder Version</key>
+	<string>7534.48.3</string>
 	<key>CFBundleDisplayName</key>
 	<string>YouTube video downloader</string>
 	<key>CFBundleIdentifier</key>
@@ -11,9 +13,9 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.1.4</string>
+	<string>1.1.5</string>
 	<key>CFBundleVersion</key>
-	<string>1.1.4</string>
+	<string>1.1.5</string>
 	<key>Chrome</key>
 	<dict/>
 	<key>Content</key>
@@ -49,8 +51,8 @@
 		</dict>
 	</dict>
 	<key>Update Manifest URL</key>
-	<string>http://github.com/jonathanboom/YouTube-video-downloader-for-Safari/raw/master/UpdateManifest.plist</string>
+	<string>http://github.com/lsinger/YouTube-video-downloader-for-Safari/raw/master/UpdateManifest.plist</string>
 	<key>Website</key>
-	<string>http://jonathanboom.tumblr.com</string>
+	<string>http://github.com/lsinger/YouTube-video-downloader-for-Safari</string>
 </dict>
 </plist>

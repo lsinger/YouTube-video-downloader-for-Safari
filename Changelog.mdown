@@ -1,5 +1,12 @@
 # 1.1 releases
 
+1.1.5
+
+- Made everything work again -- with or without HTML5 and / or the YouTube5 extension
+- Support for 480p WebM format
+- Includes fixes from Zhusee: https://github.com/zhusee2/YouTube-video-downloader-for-Safari
+- Includes fixes from lsinger: https://github.com/lsinger/YouTube-video-downloader-for-Safari
+
 1.1.4
 
 - Videos no longer save as "videoplayback"!
