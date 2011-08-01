@@ -105,8 +105,10 @@ if (!htmlFive) {
 	var formats = scriptSource.split("\"fmt_url_map\": \"")[1].split("\"")[0].split(",");
 	if (formats.length > 1) {
 		var downloadString = "Downloads: ";
-	} else {
+	} else if (formats.length === 1) {
 		var downloadString = "Download: ";
+	} else {
+		var downloadString = "No downloads found. ";
 	}
 	// clean up formats
 	for (var i = 0; i < formats.length; i++) {
